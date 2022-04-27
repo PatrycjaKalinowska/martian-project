@@ -16,7 +16,7 @@ const ArticleList = (props) => {
 
     return <>
         <ul>
-            {data.map((item, index) => <li key={index}>{item.title}</li> )}
+            {data.map((item, index) => <li key={index}>{item.id}</li> )}
         </ul>
     </>
 }
