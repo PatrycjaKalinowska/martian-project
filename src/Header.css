@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #2c3531;
+  --primary-color: #181a19;
   --secondary-color: #116466;
   --accent-color: #d9b08c;
   --text-primary-color: #d1e8e2;
@@ -19,7 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 80px;
+    
     position: fixed;
     opacity: 90%;
   }

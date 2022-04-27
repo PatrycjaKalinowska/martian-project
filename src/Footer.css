@@ -2,7 +2,7 @@
     box-sizing: border-box;}
 
     :root {
-        --primary-color: #2c3531;
+        --primary-color: #181a19;
         --secondary-color: #116466;
         --accent-color: #d9b08c;
         --text-primary-color: #d1e8e2;
@@ -12,7 +12,7 @@
 .footer {
     background-color: var(--primary-color);
     color: var(--text-primary-color);
-    border-top: 1px solidvar var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
     height: 60px;
     display: flex;
     justify-content: center;
@@ -22,8 +22,14 @@
       margin: 0;
       align-self: center;
       list-style: none;
-      padding: 10px;
+      padding: 10px 80px;
   }
 
-  .footer-menu-rights {
-    }
+  .footer-menu-rights a {
+      text-decoration: none;
+      color: var(--text-primary-color);
+  }
+
+  .footer-menu-rights a:hover {
+      color: var(--text-accent-color);
+  }

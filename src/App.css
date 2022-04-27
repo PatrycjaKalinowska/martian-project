@@ -1,11 +1,20 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.content {
-  background-color: black;
-  color: white;
-  /* height: 100vh; */
-  border: 1px solid green
+:root {
+  --primary-color: #181a19;
+  --secondary-color: #116466;
+  --accent-color: #d9b08c;
+  --text-primary-color: #d1e8e2;
+  --text-accent-color: #ffcb9a;
 }
+
+.container {
+    background-color: var(--primary-color);
+}
+
+
 
