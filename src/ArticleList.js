@@ -15,7 +15,7 @@ const ArticleList = (props) => {
     if (!data) return <p>Loading...</p>
 
     return <ul>
-            {data.map((item, index) => <li><Article className='content-news-article' key={index}>{item}</Article></li> )}
+            {data.map((item, index) => <li key={index}><Article className='content-news-article' key={index}>{item}</Article></li> )}
     </ul>
 }
 
