@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "./Article";
+import ArticleList from "./ArticleList";
 
 const Content = () => {
 
@@ -13,7 +13,8 @@ const Content = () => {
                 <div className="content-news-container">
                     <h2>Space News</h2>
                     <div className="content-news-articles-container">
-                        <Article></Article>
+                        <ArticleList>
+                        </ArticleList>
                     </div>
                 </div>
             </div>
