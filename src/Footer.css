@@ -1,8 +1,29 @@
 * {
     box-sizing: border-box;}
 
+    :root {
+        --primary-color: #2c3531;
+        --secondary-color: #116466;
+        --accent-color: #d9b08c;
+        --text-primary-color: #d1e8e2;
+        --text-accent-color: #ffcb9a;
+      }
+
 .footer {
-    background-color: black;
-    color: white;
-    border: 1px solid blue
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+    border-top: 1px solidvar var(--secondary-color);
+    height: 60px;
+    display: flex;
+    justify-content: center;
   }
+
+  .footer-menu {
+      margin: 0;
+      align-self: center;
+      list-style: none;
+      padding: 10px;
+  }
+
+  .footer-menu-rights {
+    }
