@@ -1,15 +1,3 @@
-:root {
-  --primary-color: #181a19;
-  --secondary-color: #116466;
-  --accent-color: #d9b08c;
-  --text-primary-color: #d1e8e2;
-  --text-accent-color: #ffcb9a;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .header {
     background-color: var(--primary-color);
     color: var(--text-primary-color);
@@ -41,6 +29,7 @@
     text-decoration: none;
     color: var(--text-primary-color);
     text-transform: uppercase;
+    transition: 0.5s;
   }
 
   .menu-item a:hover {

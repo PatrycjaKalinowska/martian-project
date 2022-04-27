@@ -1,17 +1,8 @@
-:root {
-    --primary-color: #181a19;
-    --secondary-color: #116466;
-    --accent-color: #d9b08c;
-    --text-primary-color: #d1e8e2;
-    --text-accent-color: #ffcb9a;
-  }
-  
-  * {
-      box-sizing: border-box;
-  }
-
   .content {
     padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .content-hero-welcome {
@@ -19,9 +10,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   .content-hero-welcome h1 {
       color: var(--text-accent-color);
+      padding-bottom: 20px;
+  }
+
+  .content-news-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content-news-container h2{
+      color: var(--text-accent-color);
+      padding: 20px 0;
+  }
+
+  .content-news-article-list {
+    display: flex;
   }
