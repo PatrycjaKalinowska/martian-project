@@ -1,0 +1,17 @@
+.weather-content {
+    color: var(--text-primary-color);
+    padding: 80px;
+    min-height: calc(100vh - 60px);
+
+}
+
+.data-loading-screen {
+    color: var(--text-primary-color);
+    padding: 80px;
+    height: 90vh;
+}
+
+.weather-header {
+    color: var(--text-accent-color);
+
+}

@@ -8,7 +8,6 @@ const ArticleList = (props) => {
     useEffect(()=> {
         fetch('https://api.spaceflightnewsapi.net/v3/articles?_limit=6')
         .then(res => res.json()).then(resData => {
-            console.log(resData);
             return setData(resData)})
     }, []);
 
