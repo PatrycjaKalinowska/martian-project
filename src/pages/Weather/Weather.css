@@ -1,6 +1,6 @@
-.weather-content {
+.weather-page-container {
     color: var(--text-primary-color);
-    padding: 80px;
+    padding: 100px 80px;
     min-height: calc(100vh - 60px);
 
 }
@@ -11,7 +11,8 @@
     height: 90vh;
 }
 
-.weather-header {
+.weather-page-title {
     color: var(--text-accent-color);
+    padding-bottom: 30px;
 
 }

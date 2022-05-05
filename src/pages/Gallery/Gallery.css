@@ -1,0 +1,10 @@
+.gallery-page-container {
+    height: calc(100vh - 60px);
+    padding: 100px 80px;
+    color: var(--text-primary-color);
+}
+
+.gallery-page-title {
+    color: var(--text-accent-color);
+    padding-bottom: 30px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import WeatherBox from "./WeatherBox";
+import WeatherBox from "./components/WeatherBox";
 import './Weather.css';
 
 const Weather = () => {
@@ -18,8 +18,8 @@ const Weather = () => {
         const data = Object.entries(initialData.validity_checks).filter((element, index) => index<6)
         console.log(initialData);
         return (
-            <div className="weather-content">
-               <h2 className="weather-header">Latest weather on Mars</h2>
+            <div className="weather-page-container">
+               <h2 className="weather-page-title">Latest weather on Mars</h2>
                <ul>
                 { data.map(item => <li key={item[0]}><WeatherBox item={item}/></li>) }
                </ul>

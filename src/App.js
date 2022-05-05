@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Footer from './Footer';
 import Header from './Header';
-import Content from './Content';
-import Weather from './Weather';
-import Gallery from './Gallery';
-import Contact from './Contact';
+import Content from './pages/Content/Content';
+import Weather from './pages/Weather/Weather';
+import Gallery from './pages/Gallery/Gallery';
+import Contact from './pages/Contact/Contact';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 

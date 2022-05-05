@@ -1,0 +1,10 @@
+.contact-page-container {
+    padding: 100px 80px;
+    min-height: calc(100vh - 60px);
+    color: var(--text-primary-color);
+}
+
+.contact-page-title {
+    color: var(--text-accent-color);
+    padding: 30px;
+}
