@@ -1,5 +1,5 @@
 .gallery-page-container {
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     padding: 100px 80px;
     color: var(--text-primary-color);
 }
@@ -9,11 +9,12 @@
     padding-bottom: 30px;
 }
 
-.gallery-card {
-
+.gallery-page-text{
+    padding-bottom: 20px;
 }
 
-.gallery-card-photo {
-    width: 200px;
-    height: auto;
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
 }
+
