@@ -11,7 +11,7 @@ const ArticleList = (props) => {
             return setData(resData)})
     }, []);
 
-    if (!data) return <p>Loading...</p>
+    if (!data) return <p className="loading">Data is loading... ... ...</p>
 
     return <ul>
             {data.map((item, index) => <li key={index}><Article className='content-news-article' key={index}>{item}</Article></li> )}

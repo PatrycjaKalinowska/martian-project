@@ -9,4 +9,8 @@
           padding: 10px 20px; 
       }
 
+      .loading {
+          color: var(--text-primary-color);
+      }
+
 

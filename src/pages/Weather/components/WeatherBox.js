@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import './WeatherBox.css';
 
-const WeatherBox = ( { children, item } ) => {
-    const [weather, setWeather] = useState(item);
+const WeatherBox = ( { item } ) => {
     
-    console.log(weather);
+    console.log(item);
     return (
         <div className="weather-box-container">
-            <h3 className="weather-box-sol">Sol {weather[0]}</h3>
+            <h3 className="weather-box-sol">Sol {item[0]}</h3>
             <div></div>
             
         </div>
