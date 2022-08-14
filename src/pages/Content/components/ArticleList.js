@@ -4,7 +4,7 @@ import './ArticleList.css'
 
 const ArticleList = (props) => {
     const [data, setData] = useState([]);
-    
+    const [isLoading, setIsLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [element, setElement] = useState(null);
 
@@ -38,13 +38,15 @@ const ArticleList = (props) => {
     useEffect(()=> {
         fetch(`https://api.spaceflightnewsapi.net/v3/articles?_limit=${page}`)
         .then(res => res.json()).then(resData => {
-            return setData(resData)})
-    }, [page]);
-
-    if (!data) return <p className="loading">Data is loading... ... ...</p>
+            setData(prev => [...resData]);
+            setIsLoading(false);
+        })
+    }, [page, isLoading]);
 
     return <ul>
-            {data.map((item, index) => <li className='content-article-list-li' ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> )}
+            { !isLoading ? data.map((item, index) => <li className='content-article-list-li' ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> ) :
+            <li className="loading">Data is loading... ... ...</li>}
+           
     </ul>
 }
 
