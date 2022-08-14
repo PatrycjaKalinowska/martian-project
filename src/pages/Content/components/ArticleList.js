@@ -4,6 +4,7 @@ import './ArticleList.css'
 
 const ArticleList = (props) => {
     const [data, setData] = useState([]);
+    
     const [page, setPage] = useState(1);
     const [element, setElement] = useState(null);
 
@@ -43,7 +44,7 @@ const ArticleList = (props) => {
     if (!data) return <p className="loading">Data is loading... ... ...</p>
 
     return <ul>
-            {data.map((item, index) => <li ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> )}
+            {data.map((item, index) => <li className='content-article-list-li' ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> )}
     </ul>
 }
 

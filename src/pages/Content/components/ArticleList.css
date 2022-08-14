@@ -4,9 +4,11 @@
           flex-wrap: wrap;
       }
 
-      li {
+      .content-article-list-li {
           flex: 1;
-          padding: 10px 0px; 
+          flex-basis: content;
+          padding: 20px 0px;
+          width: 100%;
       }
 
       .loading {
