@@ -1,12 +1,17 @@
 import React from "react";
 import './GalleryCard.css';
 
-const GalleryCard = ( { photosData, onClick } ) => {
+const GalleryCard = ( { photosData, setSelectedPhoto } ) => {
+
+    const handleClick = () => {
+        console.log("test");
+        setSelectedPhoto(photosData);
+    }
 
     return (
-        <div className="gallery-card" onClick={onClick}>
-            <img src={photosData.img_src} alt="" className="gallery-card-photo" onClick={onClick}/>
-            <div className="gallery-card-footer" onClick={onClick}>
+        <div className="gallery-card" onClick={handleClick}>
+            <img src={photosData.img_src} alt="" className="gallery-card-photo" onClick={handleClick}/>
+            <div className="gallery-card-footer" onClick={handleClick}>
                 <p><span>Sol:</span> {photosData.sol}</p>
                 <p><span>Earth date:</span> {photosData.earth_date}</p>
                 <p><span>Rover:</span> {photosData.rover.name}</p>
