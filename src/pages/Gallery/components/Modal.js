@@ -1,11 +1,12 @@
 import React from "react";
+import './Modal.css';
 
-const Modal = ( { selectedPhoto } ) => {
+const Modal = () => {
 
-    return(
-        <div className="backdrop">
-            <img className="photo" src={selectedPhoto} alt="enlarged"/>
-        </div>
+    return (<div className="backdrop">
+    <div className="lightbox">
+    <img className="photo" src="https://placekeanu.com/200/200" alt="enlarged"/></div>
+    </div>        
     )
 }
 

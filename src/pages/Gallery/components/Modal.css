@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --primary-color: #181a19;
+    --secondary-color: #116466;
+    --accent-color: #d9b08c;
+    --text-primary-color: #d1e8e2;
+    --text-accent-color: #ffcb9a;
+  }
+  .backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.open {
+    visibility: visible;
+}
+
+
+
+
+.lightbox {
+    width: fit-content;
+    height: fit-content;
+    background-color: #116466;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.photo {
+    margin-bottom: 10px;
+}

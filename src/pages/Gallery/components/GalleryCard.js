@@ -1,12 +1,12 @@
 import React from "react";
 import './GalleryCard.css';
 
-const GalleryCard = ( { photosData } ) => {
+const GalleryCard = ( { photosData, onClick } ) => {
 
     return (
-        <div className="gallery-card" >
-            <img src={photosData.img_src} alt="" className="gallery-card-photo"/>
-            <div className="gallery-card-footer">
+        <div className="gallery-card" onClick={onClick}>
+            <img src={photosData.img_src} alt="" className="gallery-card-photo" onClick={onClick}/>
+            <div className="gallery-card-footer" onClick={onClick}>
                 <p><span>Sol:</span> {photosData.sol}</p>
                 <p><span>Earth date:</span> {photosData.earth_date}</p>
                 <p><span>Rover:</span> {photosData.rover.name}</p>

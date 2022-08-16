@@ -11,6 +11,7 @@
     
     position: fixed;
     opacity: 90%;
+    z-index: 2;
   }
   
   .menu {
