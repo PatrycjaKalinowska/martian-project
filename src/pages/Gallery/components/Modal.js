@@ -1,18 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import './Modal.css';
+import closeButton from "../icons/x-regular-24.png";
+import leftArrow from "../icons/chevron-left-regular-24.png";
+import rightArrow from "../icons/chevron-right-regular-24.png";
 
-const Modal = ( { selectedPhoto, setSelectedPhoto } ) => {
+const Modal = ( { selectedPhoto, setSelectedPhoto, photosData } ) => {
+    const [selectedIndex, setSelectedIndex] = useState(null);
 
     const handleClick = (e) => {
         if (e.target.classList.contains('backdrop')) {
             setSelectedPhoto(null);
+        } 
+    }
+
+    const handleClose = (e) => {
+        if (e.target.classList.contains('close-button')) {
+            setSelectedPhoto(null);
         }
-        
+    }
+
+    //działa co drugie kliknięcie... :|
+    const handleLeft = () => {
+        setSelectedIndex(photosData.indexOf(selectedPhoto));
+
+        console.log(selectedIndex);
+
+        if (selectedIndex > 0) {
+            setSelectedPhoto(photosData[selectedIndex-1]);
+        } else  if (selectedIndex === 0) {
+            setSelectedPhoto(photosData[photosData.length-1]);
+        }
+    }
+
+    const handleRight = () => {
+
     }
 
     return (<div className="backdrop" onClick={handleClick}>
         <div className="lightbox">
-            <img className="photo" src={selectedPhoto.img_src} alt="enlarged"/>
+            <img className='close-button' src={closeButton} onClick={handleClose}></img>
+            <div className='photo-container'>
+                <img className='arrow left-arrow' src={leftArrow} onClick={handleLeft}></img>
+                <img className='arrow right-arrow' src={rightArrow} onClick={handleRight}></img>
+                <img className="photo" src={selectedPhoto.img_src} alt="enlarged"/>
+            </div>
             <div className="photo-footer">
                     <p><span>Sol:</span> {selectedPhoto.sol}</p>
                     <p><span>Earth date:</span> {selectedPhoto.earth_date}</p>

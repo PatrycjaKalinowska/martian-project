@@ -1,11 +1,12 @@
 import React from "react";
 import './GalleryCard.css';
 
-const GalleryCard = ( { photosData, setSelectedPhoto } ) => {
+const GalleryCard = ( { photosData, setSelectedPhoto, setSelectedIndex } ) => {
 
     const handleClick = () => {
         console.log("test");
         setSelectedPhoto(photosData);
+        
     }
 
     return (
