@@ -9,7 +9,7 @@ const Gallery = () => {
     const [photosData, setPhotosData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
-    const [selectedIndex, setSelectedIndex] = useState(null);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
      //for no photos enter date 2015-04-04, for 4x photos enter date 2015-6-3
      useEffect(() => {
@@ -29,7 +29,7 @@ const Gallery = () => {
             { isLoading ? <p>Data is loading... ... ...</p> : photosData.map((item, index) => <GalleryCard setSelectedPhoto={setSelectedPhoto} key={index} photosData={item} setSelectedIndex={setSelectedIndex}/>) }
             { !isLoading && photosData.length === 0 && <p className="no-photos-info"><b>No photos available for given Rover and Earth date. Please change the date or the rover and try again. </b></p>}
         </div>
-        {selectedPhoto && <Modal className='modal' selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} photosData={photosData}/>}
+        {selectedPhoto && <Modal className='modal' selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} photosData={photosData} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />}
     </div>
 }
 

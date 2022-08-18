@@ -4,8 +4,8 @@ import closeButton from "../icons/x-regular-24.png";
 import leftArrow from "../icons/chevron-left-regular-24.png";
 import rightArrow from "../icons/chevron-right-regular-24.png";
 
-const Modal = ( { selectedPhoto, setSelectedPhoto, photosData } ) => {
-    const [selectedIndex, setSelectedIndex] = useState(null);
+const Modal = ( { selectedPhoto, setSelectedPhoto, photosData, selectedIndex, setSelectedIndex } ) => {
+    
 
     const handleClick = (e) => {
         if (e.target.classList.contains('backdrop')) {
@@ -19,21 +19,24 @@ const Modal = ( { selectedPhoto, setSelectedPhoto, photosData } ) => {
         }
     }
 
-    //działa co drugie kliknięcie... :|
     const handleLeft = () => {
-        setSelectedIndex(photosData.indexOf(selectedPhoto));
 
-        console.log(selectedIndex);
-
-        if (selectedIndex > 0) {
-            setSelectedPhoto(photosData[selectedIndex-1]);
-        } else  if (selectedIndex === 0) {
-            setSelectedPhoto(photosData[photosData.length-1]);
+        if (selectedIndex !== 0) {
+            setSelectedIndex(selectedIndex - 1);
+        } else if (selectedIndex === 0) {
+            setSelectedIndex(photosData.length-1);
         }
+        setSelectedPhoto(photosData[selectedIndex]);
     }
 
     const handleRight = () => {
-
+        
+        if (selectedIndex !== photosData.length-1) {
+            setSelectedIndex(selectedIndex + 1);
+        } else if (selectedIndex === photosData.length-1) {
+            setSelectedIndex(0);
+        }
+        setSelectedPhoto(photosData[selectedIndex]);
     }
 
     return (<div className="backdrop" onClick={handleClick}>

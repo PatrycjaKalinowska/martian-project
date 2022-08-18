@@ -5,7 +5,7 @@ const GalleryCard = ( { photosData, setSelectedPhoto, setSelectedIndex } ) => {
 
     const handleClick = () => {
         console.log("test");
-        setSelectedPhoto(photosData);
+        setSelectedIndex(photosData.indexOf(setSelectedPhoto(photosData)));
         
     }
 
