@@ -34,30 +34,16 @@
     flex-wrap: wrap;
 }
 
-/* .modal {
-    visibility: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
+.input-container-select {
+    max-width: 150px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    visibility: hidden 
-} */
+}
 
-/* .open {
-    visibility: visible;
-} */
-
-/* .closed {
-    visibility: hidden;
-} */
-
-
+.select-label {
+    margin-right: 10px;
+}
 
 .gallery-card {
     z-index: 1;

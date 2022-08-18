@@ -8,8 +8,8 @@ const Content = () => {
         <div className="content-hero-container">
             <div className="content-hero-welcome">
                 <h1> Welcome Space Rangers!</h1>
-                <p>This is a place where are gathered some interesting information about space-related topics.
-                You can read the latest news, see gallery of photos taken by Mars rovers, check what is the weather on Mars and more. Enjoy! </p>
+                <p>This is a place where you can find some interesting information about space-related topics.
+                You can read the latest news, see some photos taken by Mars rovers, check the weather on Mars and more. Enjoy! </p>
             </div> 
         </div>
         <div className="content-news-container" >
