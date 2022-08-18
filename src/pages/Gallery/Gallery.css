@@ -20,29 +20,9 @@
     z-index: 0;
 }
 
-.gallery-page-title {
-    color: var(--text-accent-color);
-    padding-bottom: 30px;
-}
-
-.gallery-page-text{
-    padding-bottom: 20px;
-}
-
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.input-container-select {
-    max-width: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.select-label {
-    margin-right: 10px;
 }
 
 .gallery-card {

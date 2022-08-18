@@ -1,0 +1,8 @@
+.gallery-page-title {
+    color: var(--text-accent-color);
+    padding-bottom: 30px;
+}
+
+.gallery-page-text{
+    padding-bottom: 20px;
+}

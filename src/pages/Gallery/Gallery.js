@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import GalleryHeader from "./components/GalleryHeader";
 import GalleryCard from "./components/GalleryCard";
 import Modal from "./components/Modal";
+import UserInput from "./components/UserInput";
 import './Gallery.css';
 
 
 const Gallery = () => {
     const API_KEY = process.env.REACT_APP_NASA_API_KEY;
-    const [rover, setRover] = useState("curiosity");
+    const [rover, setRover] = useState("perseverance");
     const [photosData, setPhotosData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -15,29 +17,25 @@ const Gallery = () => {
 
      //for no photos enter date 2015-04-04, for 4x photos enter date 2015-6-3
      useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=2022-1-1&api_key=${API_KEY}`)
-        .then(res => res.json())
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=2012-10-9&api_key=${API_KEY}`)
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                setPhotosData([]);
+            }
+        })
         .then(resData => {
             setPhotosData(resData.photos);
             setIsLoading(false);
             console.log(resData.photos);
-        })
+        }).catch(console.log("data not found"));
     }, [ ,rover]);
    
     return <div className="gallery-page-container" >
-        <h2 className="gallery-page-title">Gallery</h2>
-        <p className="gallery-page-text">Take a look at the surface of Mars! Here you can see some photos taken by Mars rovers. You can choose from several Mars rovers to see photos taken by your chosen one. You can also define the Earth date and see the photos taken on that day. Enjoy! </p>
+        <GalleryHeader/>
         
-        <form>
-            <div className="input-container-select">
-                <label className="select-label">Rover:</label>
-                <select value={rover} onChange={ e => setRover(e.target.value)}>
-                    <option value="curiocity">Curiocity</option>
-                    <option value="opportunity">Opportunity</option>
-                    <option value="perseverance">Perseverance</option>
-                </select>
-            </div>
-        </form>
+        <UserInput rover={rover} setRover={setRover} />
 
         <div className="gallery-container">  
             { isLoading ? <p>Data is loading... ... ...</p> : photosData.map((item, index) => <GalleryCard setSelectedPhoto={setSelectedPhoto} key={index} photosData={item} setSelectedIndex={setSelectedIndex}/>) }

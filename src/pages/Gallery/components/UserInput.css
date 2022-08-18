@@ -1,0 +1,19 @@
+.input-container-select {
+    /* max-width: 150px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.select-label {
+    margin-right: 10px;
+}
+
+.select {
+    margin-right: 10px;
+}
+
+.select-info {
+    
+}
