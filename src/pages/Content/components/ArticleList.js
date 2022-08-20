@@ -37,11 +37,17 @@ const ArticleList = (props) => {
 
     useEffect(()=> {
         fetch(`https://api.spaceflightnewsapi.net/v3/articles?_limit=${page}`)
-        .then(res => res.json()).then(resData => {
+        .then(res => {
+            if(!res.ok) {
+                throw Error('could not fetch the data for that resource')
+            }
+            return res.json()
+        }).then(resData => {
             setData(prev => [...resData]);
             setIsLoading(false);
-        })
-    }, [page, isLoading]);
+        }).catch(err => 
+            console.log(err))
+    }, [, page, isLoading]);
 
     return <ul>
             { !isLoading ? data.map((item, index) => <li className='content-article-list-li' ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> ) :
