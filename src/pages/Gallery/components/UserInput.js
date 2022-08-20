@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./UserInput.css"
 
-const UserInput = ( { rover, setRover } ) => {
+const UserInput = ( { rover, setRover, date, onChange, day, setDay, month, setMonth, year, setYear } ) => {
     const [info, setInfo] = useState("");
 
     const getInfo = () => {
@@ -23,14 +23,18 @@ const UserInput = ( { rover, setRover } ) => {
     
     useEffect( () => {getInfo()}, [ ,rover]);
 
+    // useEffect( () => {
+    //     setDay(date.getDate());
+    //     setMonth(date.getMonth());
+    //     setYear(date.getFullYear());
+    // }, [ ,date]);
 
     return(
         <form>
             <div className="input-container-select">
-                <label className="select-label">Rover:</label>
+                <label className="select-label">Pick Rover:</label>
                 <select className="select" value={rover} onChange={ e => {
                     setRover(e.target.value);
-                    // getInfo();
                     }
                 }>
                     <option value="perseverance">Perseverance</option>
@@ -39,6 +43,13 @@ const UserInput = ( { rover, setRover } ) => {
                     <option value="spirit">Spirit</option>
                 </select>
                 <p className="select-info">{info}</p>
+            </div>
+            <div className="input-container-date-picker">
+                <label className="date-picker-label">Pick a date:</label>
+                <div className="date-picker-container">
+                    
+                </div>
+                {console.log(date)}
             </div>
         </form>
     )
