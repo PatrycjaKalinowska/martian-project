@@ -12,7 +12,7 @@
     --text-accent-color: #ffcb9a;
   }
 
-.input-container-select {
+.input-container-select-rover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 }
 
-.select-label {
+.label {
     margin-right: 10px;
 }
 
@@ -30,22 +30,23 @@
 
 .select-info {
     display: block;
+    font-style: italic;
+    color: var(--secondary-color);
 }
 
 .input-container-date-picker {
-    max-width: 250px;
     margin-bottom: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.date-picker-container {
-    background-color: var(--text-primary-color);
-    width: fit-content;
-    height: fit-content;
+.date-picker-label {
+    align-self: flex-start;
 }
 
-.date-picker {
-    z-index: 3;
+.date-display {
+    margin-right: 10px;
+    font-style: italic;
+    color: var(--secondary-color);
 }

@@ -13,18 +13,10 @@ const Gallery = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const [date, onChange] = useState(new Date());
-    // const [day, setDay] = useState(new Date().getDate());
-    // const [month, setMonth] = useState(new Date().getMonth());
-    // const [year, setYear] = useState(new Date().getFullYear());
-    const [day, setDay] = useState(3);
-    const [month, setMonth] = useState(6);
-    const [year, setYear] = useState(2015);
+    const [day, setDay] = useState(new Date().getDate());
+    const [month, setMonth] = useState(new Date().getMonth()+1);
+    const [year, setYear] = useState(new Date().getFullYear());    
 
-    // const displayNoPhotosInfo = () => {
-    //     return <p className="no-photos-info"><b>No photos available for given Rover and Earth date. Please change the date or the rover and try again. </b></p>;
-    // }
-    
 
      //for no photos enter date 2015-04-04, for 4x photos enter date 2015-6-3
      useEffect(() => {
@@ -33,7 +25,6 @@ const Gallery = () => {
             if (res.ok) {
                 return res.json();
             } else {
-                // displayNoPhotosInfo();
                 setPhotosData([]);
                 throw Error('could not fetch the data for that resource');             
             }
@@ -45,12 +36,12 @@ const Gallery = () => {
         }).catch( err => {
             console.log(err);
         });
-    }, [ ,rover]);
+    }, [ ,rover, year, month, day]);
    
     return <div className="gallery-page-container" >
         <GalleryHeader/>
         
-        <UserInput rover={rover} setRover={setRover} date={date} onChange={onChange} day={day} setDay={setDay}
+        <UserInput rover={rover} setRover={setRover} day={day} setDay={setDay}
             month={month} setMonth={setMonth} year={year} setYear={setYear} />
 
         <div className="gallery-container">  
