@@ -6,19 +6,6 @@
     min-height: 90vh;
   }
 
-  .content-hero-welcome {
-    color: var(--text-primary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-  }
-
-  .content-hero-welcome h1 {
-      color: var(--text-accent-color);
-      padding-bottom: 20px;
-  }
-
   .content-news-container {
       display: flex;
       flex-direction: column;

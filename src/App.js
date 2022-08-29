@@ -2,10 +2,9 @@ import React from 'react';
 import './App.css';
 import Footer from './Footer';
 import Header from './Header';
-import Content from './pages/Content/Content';
-import Weather from './pages/Weather/Weather';
+import Home from './pages/Home/Home';
+import News from './pages/News/News';
 import Gallery from './pages/Gallery/Gallery';
-import Contact from './pages/Contact/Contact';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -17,10 +16,9 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Content/>}></Route>
-          <Route path="/weather" element={<Weather />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/news" element={<News />}></Route>
           <Route path="/gallery" element={<Gallery />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
         </Routes>        
         <Footer />
       </div>

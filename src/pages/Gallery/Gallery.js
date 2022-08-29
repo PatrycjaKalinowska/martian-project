@@ -12,8 +12,8 @@ const Gallery = () => {
     const [photosData, setPhotosData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const [day, setDay] = useState(new Date().getDate());
+    const [selectedIndex, setSelectedIndex] = useState(null);
+    const [day, setDay] = useState(1);
     const [month, setMonth] = useState(new Date().getMonth()+1);
     const [year, setYear] = useState(new Date().getFullYear());    
 
@@ -37,6 +37,7 @@ const Gallery = () => {
             console.log(err);
         });
     }, [ ,rover, year, month, day]);
+    
    
     return <div className="gallery-page-container" >
         <GalleryHeader/>
@@ -45,7 +46,7 @@ const Gallery = () => {
             month={month} setMonth={setMonth} year={year} setYear={setYear} />
 
         <div className="gallery-container">  
-            { isLoading ? <p>Data is loading... ... ...</p> : photosData.map((item, index) => <GalleryCard setSelectedPhoto={setSelectedPhoto} key={index} photosData={item} setSelectedIndex={setSelectedIndex}/>) }
+            { isLoading ? <p>Data is loading... ... ...</p> : photosData.map((item, index) => <GalleryCard selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} key={index} item={item} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} photosData={photosData}/>) }
             { !isLoading && photosData.length === 0 && <p className="no-photos-info"><b>No photos available for given Rover and Earth date. Please change the date or the rover and try again. </b></p>}
         </div>
         {selectedPhoto && <Modal className='modal' selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} photosData={photosData} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />}
