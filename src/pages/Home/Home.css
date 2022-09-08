@@ -43,3 +43,22 @@
     font-size: 30px;
     margin-bottom: 20px
   }
+
+  .countdown-container {
+    border: 1px solid var(--accent-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .launch-countdown-time {
+    font-size: 36px;
+    color: var(--text-primary-color);
+  }
+
+  .launch-countdown-label {
+    color: var(--secondary-color)
+  }
+
