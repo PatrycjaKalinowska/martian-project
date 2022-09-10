@@ -1,6 +1,7 @@
 MARTIAN PROJECT
 
 This is a project (written in React) of a web page which contains some interesting information related to Space and Universe.
+You can check the website on: https://martian-project.herokuapp.com/
 
 Main features:
 1. A count down counter which displays how many time has left to next SpaceX launch (data fetched from unofficial SpaceX API: https://github.com/r-spacex/SpaceX-API).
