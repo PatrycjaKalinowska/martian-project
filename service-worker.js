@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/martian-project/precache-manifest.4353f18a54e1ec844d02cf584e4c0130.js"
+  "/martian-project/precache-manifest.2bc170d6b69ae6fbb7c9896db25c1c89.js"
 );
 
 workbox.clientsClaim();
