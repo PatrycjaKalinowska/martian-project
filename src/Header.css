@@ -39,10 +39,17 @@
 
   .logo-link{
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--text-accent-color);
     text-transform: uppercase;
     font-weight: bold;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-text {
+    margin-left: 10px;
   }
 
   .logo-link:hover {
