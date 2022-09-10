@@ -13,6 +13,9 @@ const Header = () => {
             </div>
             <ul className="menu">
             <li className="menu-item">
+                <Link className="menu-item-link"to="/">home</Link>
+            </li>
+            <li className="menu-item">
                 <Link className="menu-item-link"to="/news">news</Link>
             </li>
             <li className="menu-item">
