@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
+
+    const navRef = useRef();
+    const showNavBar = () => {
+        navRef.current.classList.toggle("responsive-nav");
+    }
 
     return <header className="header">
             <div className="logo">
@@ -11,17 +17,28 @@ const Header = () => {
                     <span className='logo-text'>martian project</span>
                 </Link>
             </div>
+            <button className="nav-btn" onClick={showNavBar}>
+                <FaBars />
+            </button>
             <ul className="menu">
-            <li className="menu-item">
-                <Link className="menu-item-link"to="/">home</Link>
-            </li>
-            <li className="menu-item">
-                <Link className="menu-item-link"to="/news">news</Link>
-            </li>
-            <li className="menu-item">
-                <Link className="menu-item-link"to="/gallery">gallery</Link>
-            </li>
+                <nav className='nav-bar' ref={navRef}>
+                    <li className="menu-item">
+                        <Link className="menu-item-link"to="/">home</Link>
+                    </li>
+                    <li className="menu-item">
+                        <Link className="menu-item-link"to="/news">news</Link>
+                    </li>
+                    <li className="menu-item">
+                        <Link className="menu-item-link"to="/gallery">gallery</Link>
+                    </li>
+                    <li>
+                        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+                            <FaTimes />
+                        </button>
+                    </li>
+                </nav>
             </ul>
+            
         </header>
 }
 

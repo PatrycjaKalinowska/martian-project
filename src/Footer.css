@@ -23,3 +23,16 @@
   .footer-menu-rights a:hover {
       color: var(--text-accent-color);
   }
+
+  @media only screen and (max-width: 675px) {
+    .footer-menu-rights {
+        padding-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 470px) {
+
+    .footer-menu {
+        padding: 10px 20px;
+    }
+  }

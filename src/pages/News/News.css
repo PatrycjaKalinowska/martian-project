@@ -20,3 +20,10 @@
   .content-news-article-list {
     display: flex;
   }
+
+  @media only screen and (max-width: 550px) {
+    .content {
+      padding: 100px 20px;
+    }
+
+  }
