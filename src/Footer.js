@@ -5,7 +5,7 @@ const Footer = () => {
 
     return <footer className="footer">
             <ul className="footer-menu">
-                <li className="footer-menu-rights"><a href="/martian-project">2022 <span>Martian Project &copy;</span> All rights reserved.</a></li>
+                <li className="footer-menu-rights"><a href="/">2022 <span>Martian Project &copy;</span> All rights reserved.</a></li>
             </ul>
         </footer>
 }
