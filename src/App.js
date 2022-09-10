@@ -16,9 +16,9 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/news" element={<News />}></Route>
-          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/martian-project" element={<Home />}></Route>
+          <Route path="/martian-project/news" element={<News />}></Route>
+          <Route path="/martian-project/gallery" element={<Gallery />}></Route>
         </Routes>        
         <Footer />
       </div>
