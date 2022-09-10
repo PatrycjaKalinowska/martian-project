@@ -61,26 +61,6 @@ const Home = () => {
             
     }, [timeDifference]);
 
-    // useEffect(() => {
-    //     fetch('https://api.spacexdata.com/v4/launches/next')
-    //         .then(res => {
-    //             if (res.ok) {
-    //                 return res.json()
-    //             } else {
-    //                 setNextLaunchInfo('Sorry, the data is not available right now.')
-    //                 throw Error('could not fetch the data for that resource');
-    //             }           
-    //         }).then(resData => {
-    //             setNextLaunchInfo(resData.details);
-    //             console.log("fetched data: " + resData.details);
-    //         }).catch( err => {
-    //             console.log(err);
-    //         });
-    // }, []);
-    
-    // <h3>Mission details:</h3>
-    // <p>{nextLaunchInfo}</p>
-
     return <div className="launch-container">
         <div className="hero-container">
             <h1> Welcome Space Rangers!</h1>

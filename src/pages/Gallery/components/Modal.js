@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import './Modal.css';
 import closeButton from "../icons/x-regular-24.png";
-import leftArrow from "../icons/chevron-left-regular-24.png";
-import rightArrow from "../icons/chevron-right-regular-24.png";
 
 const Modal = ( { selectedPhoto, setSelectedPhoto, photosData, selectedIndex, setSelectedIndex } ) => {
     
@@ -18,28 +16,6 @@ const Modal = ( { selectedPhoto, setSelectedPhoto, photosData, selectedIndex, se
             setSelectedPhoto(null);
         }
     }
-
-    // const handleLeft = () => {
-    //     if (selectedIndex !== 0) {
-    //         setSelectedIndex(selectedIndex - 1);
-    //     } else if (selectedIndex === 0) {
-    //         setSelectedIndex(photosData.length-1);
-    //     }
-    //     setSelectedPhoto(photosData[selectedIndex]);
-    // }
-
-    // const handleRight = () => {
-
-    //     if (selectedIndex !== photosData.length-1) {
-    //         setSelectedIndex(selectedIndex + 1);
-    //     } else if (selectedIndex === photosData.length-1) {
-    //         setSelectedIndex(0);
-    //     }
-    //     setSelectedPhoto(photosData[selectedIndex]);
-    // }
-
-    // <img className='arrow left-arrow' src={leftArrow} onClick={handleLeft}></img>
-    // <img className='arrow right-arrow' src={rightArrow} onClick={handleRight}></img>
 
     return (<div className="backdrop" onClick={handleClick}>
         <div className="lightbox">

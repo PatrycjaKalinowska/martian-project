@@ -1,18 +1,10 @@
 import React from "react";
 import './GalleryCard.css';
 
-const GalleryCard = ( { index, photosData, item, selectedPhoto, setSelectedPhoto, selectedIndex, setSelectedIndex } ) => {
+const GalleryCard = ( { item, setSelectedPhoto } ) => {
 
     const handleClick = () => {
-        // setSelectedIndex(index);
-        setSelectedPhoto(item);
-        // setSelectedIndex(index)
-        // setSelectedIndex(photosData.indexOf(selectedPhoto));
-        
-        // console.log("selectedIndex: " + selectedIndex);
-        // console.log(index);
-
-        
+        setSelectedPhoto(item);       
     }
 
     return (

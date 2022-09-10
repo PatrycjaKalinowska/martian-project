@@ -17,8 +17,6 @@ const Gallery = () => {
     const [month, setMonth] = useState(new Date().getMonth()+1);
     const [year, setYear] = useState(new Date().getFullYear());    
 
-
-     //for no photos enter date 2015-04-04, for 4x photos enter date 2015-6-3
      useEffect(() => {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${year}-${month}-${day}&api_key=${API_KEY}`)
         .then(res => {
@@ -38,7 +36,6 @@ const Gallery = () => {
         });
     }, [ ,rover, year, month, day]);
     
-   
     return <div className="gallery-page-container" >
         <GalleryHeader/>
         
@@ -52,6 +49,5 @@ const Gallery = () => {
         {selectedPhoto && <Modal className='modal' selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} photosData={photosData} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />}
     </div>
 }
-
 
 export default Gallery;
