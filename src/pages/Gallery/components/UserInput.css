@@ -12,12 +12,18 @@
     --text-accent-color: #ffcb9a;
   }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .input-container-select-rover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 40px 0;
-    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .label {
@@ -28,25 +34,50 @@
     margin-right: 10px;
 }
 
+.select-rover-label {
+    text-decoration: underline;
+}
+
 .select-info {
     display: block;
     font-style: italic;
     color: var(--secondary-color);
+    margin-bottom: 20px;
 }
 
 .input-container-date-picker {
     margin-bottom: 40px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .date-picker-label {
     align-self: flex-start;
+    text-decoration: underline;
+}
+
+.date-picker {
+    display: flex;
 }
 
 .date-display {
     margin-right: 10px;
     font-style: italic;
     color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .date-picker-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .date-picker {
+        display: flex;
+        flex-direction: column;
+    }
 }
