@@ -96,7 +96,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
                 }
                 }>
                     <option value="perseverance">Perseverance</option>
-                    <option value="curiocity">Curiocity</option>
+                    <option value="curiosity">Curiosity</option>
                     <option value="opportunity">Opportunity</option>
                     <option value="spirit">Spirit</option>
                 </select>
