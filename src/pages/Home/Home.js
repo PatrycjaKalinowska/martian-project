@@ -68,7 +68,7 @@ const Home = () => {
             You can read the latest news, see some photos taken by Mars rovers and check the next SpaceX Launch info. Enjoy! </p>
         </div>
         <div className="countdown-container">
-            <h2 className="launch-header">Next SpaceX Launch is planned on:</h2>
+            <h2 className="launch-header">Next SpaceX Launch is planned in:</h2>
             <p className='launch-countdown-time'>{formatCountdownTime(timeDifference)}</p>
             <p className='launch-countdown-label'>days : hours : minutes : seconds</p>
         </div>
