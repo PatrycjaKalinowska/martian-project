@@ -1,64 +1,78 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  .home-container {
+    min-height: 90vh;
+    padding: 70px 80px 50px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary-color);
   }
-  
-  :root {
-    --primary-color: #181a19;
-    --secondary-color: #116466;
-    --accent-color: #d9b08c;
-    --text-primary-color: #d1e8e2;
-    --text-accent-color: #ffcb9a;
+
+  .hero-header {
+      color: var(--text-accent-color);
+      padding-bottom: 20px;
+      text-align: center;
   }
 
   .hero-container {
-    color: var(--text-primary-color);
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+  }
+
+  .hero-container h2 {
     margin-bottom: 20px;
+    text-align: center;
   }
+ 
+.hero-image-container {
+  width: 100%;
+  height: auto;
+}
 
-  .hero-container h1 {
-      color: var(--text-accent-color);
-      padding-bottom: 20px;
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hero-image-text-container {
+  width: 100%;
+}
+
+.hero-image-text-container p {
+  margin-bottom: 10px;
+}
+
+.hero-image-text-container span {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 460px) {
+  .home-container {
+    padding: 70px 40px 50px 40px;
   }
-
-  .launch-container {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .hero-header {
+    font-size: 26px;
   }
-
-  .launch-header {
-    color: var(--secondary-color);
-    margin-bottom: 15px;
+  .hero-container h2 {
+    font-size: 20px;
   }
+}
 
-  .launch-time {
-    font-size: 30px;
-    margin-bottom: 20px
+@media screen and (max-width: 360px) {
+  .home-container {
+    padding: 70px 20px 50px 20px;
   }
+}
 
-  .countdown-container {
-    border: 1px solid var(--accent-color);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 320px) {
+  .hero-header {
+    font-size: 22px;
   }
-
-  .launch-countdown-time {
-    font-size: 36px;
-    color: var(--text-primary-color);
+  .hero-container h2 {
+    font-size: 16px;
   }
-
-  .launch-countdown-label {
-    color: var(--secondary-color)
-  }
-
+}
