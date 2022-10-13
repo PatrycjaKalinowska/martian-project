@@ -16,9 +16,9 @@
     color: var(--text-accent-color);
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 550px) {
     .gallery-page-container {
-        padding: 100px 20px;
+        padding: 70px 20px;
     }
 }
 
