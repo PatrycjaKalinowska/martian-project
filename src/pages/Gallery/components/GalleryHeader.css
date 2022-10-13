@@ -1,4 +1,12 @@
+.gallery-page-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .gallery-page-title {
     color: var(--text-accent-color);
     padding-bottom: 30px;
+    align-self: center;
 }

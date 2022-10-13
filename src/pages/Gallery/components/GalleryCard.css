@@ -1,10 +1,17 @@
 .gallery-card {
     background-color: var(--primary-color);
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color-light),
+        0 0 5px var(--accent-color-light) inset;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     width: fit-content;
-    margin: 10px auto;
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .gallery-card:hover {
@@ -13,6 +20,12 @@
 
 .gallery-card-photo {
     width: 200px;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-card-footer {
+    width: 200px;
 }

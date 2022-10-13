@@ -29,9 +29,7 @@ const ArticleList = (props) => {
             if(currentElement) {
                 currentObserver.unobserve(currentElement);
             }
-
-        };
-
+        }
     }, [element]);
 
 
@@ -47,7 +45,7 @@ const ArticleList = (props) => {
             setIsLoading(false);
         }).catch(err => 
             console.log(err))
-    }, [, page, isLoading]);
+    }, [page, isLoading]);
 
     return <ul>
             { !isLoading ? data.map((item, index) => <li className='content-article-list-li' ref={setElement} key={index}><Article className='content-news-article' key={index}>{item}</Article></li> ) :

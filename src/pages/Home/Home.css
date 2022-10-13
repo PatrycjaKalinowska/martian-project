@@ -28,7 +28,8 @@
  
 .hero-image-container {
   width: 100%;
-  height: auto;
+  height: 60vh;
+  margin-bottom: 20px;
 }
 
 .hero-image-container img {
@@ -47,24 +48,19 @@
 }
 
 .hero-image-text-container span {
-  color: var(--secondary-color);
+  color: var(--text-secondary-color);
+  margin-right: 10px;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 550px) {
   .home-container {
-    padding: 70px 40px 50px 40px;
+    padding: 70px 20px 50px 20px;
   }
   .hero-header {
     font-size: 26px;
   }
   .hero-container h2 {
     font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .home-container {
-    padding: 70px 20px 50px 20px;
   }
 }
 

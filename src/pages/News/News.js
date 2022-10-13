@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ArticleList from "./components/ArticleList";
 import './News.css';
 

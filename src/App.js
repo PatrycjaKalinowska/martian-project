@@ -5,7 +5,7 @@ import Header from './Header';
 import Home from './pages/Home/Home';
 import News from './pages/News/News';
 import Gallery from './pages/Gallery/Gallery';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 
 

@@ -1,20 +1,6 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  :root {
-    --primary-color: #181a19;
-    --secondary-color: #116466;
-    --accent-color: #d9b08c;
-    --text-primary-color: #d1e8e2;
-    --text-accent-color: #ffcb9a;
-  }
-
 .gallery-page-container {
     min-height: calc(100vh - 60px);
-    padding: 100px 80px;
+    padding: 70px 80px;
     padding-bottom: 20px;
     color: var(--text-primary-color);
     position: relative;
@@ -24,10 +10,6 @@
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
-}
-
-.gallery-card {
-    z-index: 1;
 }
 
 .no-photos-info {

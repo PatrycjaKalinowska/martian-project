@@ -8,7 +8,7 @@ const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return <div className="header">
-            <a href="#" className="header-logo-link">martian project</a>
+            <a href="/" className="header-logo-link">martian project</a>
         <nav className="header-nav">
             <ul className="header-menu-list">
                 <li className="header-menu-list-item"><Link className='header-menu-list-item-link' to="/">Home</Link></li>

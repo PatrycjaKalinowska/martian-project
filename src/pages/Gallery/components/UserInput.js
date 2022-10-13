@@ -12,7 +12,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
             case 'perseverance':
                 setInfo('(Rover landed on Mars on February 18, 2021. Active until now.)');
                 break;
-            case 'curiocity':
+            case 'curiosity':
                 setInfo('(Rover landed on Mars on August 6, 2012. Active until now.)');
                 break;
             case 'opportunity':
@@ -20,6 +20,9 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
                 break;
             case 'spirit':
                 setInfo('(Rover landed on Mars on January 4, 2004. Mission completed on May 25, 2011.)');
+                break;
+            default:
+                setInfo("");
                 break;
         }
     }
@@ -44,7 +47,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
     }
 
     const populateDayOptions = () => {
-        if (month == 4 || month == 6 || month == 9 || month == 11) {
+        if (parseInt(month) === 4 || parseInt(month) === 6 || parseInt(month) === 9 || parseInt(month) === 11) {
             selectDay.current.innerHTML = "";
             for (let i = 1; i <= 30; i++) {
                 const newOption = document.createElement("option");
@@ -53,7 +56,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
                 selectDay.current.options.add(newOption);
             }
 
-        } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        } else if (parseInt(month) === 1 || parseInt(month) === 3 || parseInt(month) === 5 || parseInt(month) === 7 || parseInt(month) === 8 || parseInt(month) === 10 || parseInt(month) === 12) {
             selectDay.current.innerHTML = "";
             for (let i = 1; i <= 31; i++) {
                 const newOption = document.createElement("option");
@@ -61,7 +64,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
                 newOption.innerHTML = i;
                 selectDay.current.options.add(newOption);
             }
-        } else if (month == 2 && year % 4 == 0) {
+        } else if (parseInt(month) === 2 && year % 4 === 0) {
             selectDay.current.innerHTML = "";
             for (let i = 1; i <= 29; i++) {
                 const newOption = document.createElement("option");
@@ -79,13 +82,15 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
             }
         }
     }
-
-    useEffect(() => { getInfo() }, [, rover]);
+   
     useEffect(() => {
+        getInfo();
         populateYearOptions();
         populateMonthOptions();
+        populateDayOptions();
     }, []);
-    useEffect(() => { populateDayOptions(); }, [, day, month, year]);
+    useEffect(() => { getInfo() }, [rover]);
+    useEffect(() => { populateDayOptions(); }, [day, month, year]);
 
     return (
         <form>
@@ -104,7 +109,7 @@ const UserInput = ({ rover, setRover, day, setDay, month, setMonth, year, setYea
             <p className="select-info">{info}</p>
             <div className="input-container-date-picker">
                 <div className="date-picker-container">
-                    <label className="date-picker-label label">Pick a date:</label>
+                    <label className="date-picker-label label">Pick Date:</label>
                     <div className="date-picker">
                         <label className="year-label label">Year:</label>
                         <select ref={selectYear} className="select-year select" value={year} onChange={e => {

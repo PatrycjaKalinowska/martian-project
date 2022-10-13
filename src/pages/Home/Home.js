@@ -27,7 +27,7 @@ const Home = () => {
         {isLoading ? <p>Loading... ... ...</p> : <div className="hero-container">
             <h2>"{apod.title}"</h2>
             <div className="hero-image-container">
-                <img src={apod.url}></img>
+                <img src={apod.url} alt="NASA APOD"></img>
             </div>
             <div className="hero-image-text-container">
             <p className="copyright"><span>Copyright:</span> {apod.copyright}</p>
