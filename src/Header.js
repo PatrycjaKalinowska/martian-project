@@ -12,6 +12,7 @@ const Header = () => {
         <nav className="header-nav">
             <ul className="header-menu-list">
                 <li className="header-menu-list-item"><Link className='header-menu-list-item-link' to="/">Home</Link></li>
+                <li className="header-menu-list-item"><Link className='header-menu-list-item-link' to="/apod">Apod</Link></li>
                 <li className="header-menu-list-item"><Link className='header-menu-list-item-link' to="/news">News</Link></li>
                 <li className="header-menu-list-item"><Link className='header-menu-list-item-link' to="/gallery">Gallery</Link></li>
             </ul>
@@ -21,6 +22,7 @@ const Header = () => {
                     <FaTimes className="header-menu-hamburger-overlay-close" onClick={() => { setToggleMenu(false) }} />
                     <ul className="header-menu-hamburger-list">
                         <li className="header-menu-hamburger-item"><Link className="header-menu-hamburger-item-link" to="/">Home</Link></li>
+                        <li className="header-menu-hamburger-item"><Link className="header-menu-hamburger-item-link" to="/apod">Apod</Link></li>
                         <li className="header-menu-hamburger-item"><Link className="header-menu-hamburger-item-link" to="/news">News</Link></li>
                         <li className="header-menu-hamburger-item"><Link className="header-menu-hamburger-item-link" to="/gallery">Gallery</Link></li>
                     </ul>
